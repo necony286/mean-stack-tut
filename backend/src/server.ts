@@ -1,5 +1,5 @@
 import express from "express";
-import cors from "cors";
+import cors from "cors"; //cross origin
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import userRouter from "./routes/user.routes";
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 mongoose.connect("mongodb://localhost:27017/mydb");
 const connection = mongoose.connection;
 connection.once("open", () => {
-  console.log("mongo ok (darling)");
+  console.log("mongo okkkeee");
 });
 
 const router = express.Router();

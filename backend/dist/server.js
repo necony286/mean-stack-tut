@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
+const cors_1 = __importDefault(require("cors")); //cross origin
 const body_parser_1 = __importDefault(require("body-parser"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const user_routes_1 = __importDefault(require("./routes/user.routes"));
@@ -14,7 +14,7 @@ app.use(body_parser_1.default.json());
 mongoose_1.default.connect("mongodb://localhost:27017/mydb");
 const connection = mongoose_1.default.connection;
 connection.once("open", () => {
-    console.log("mongo ok (darling)");
+    console.log("mongo okkkeee");
 });
 const router = express_1.default.Router();
 router.use("/users", user_routes_1.default);

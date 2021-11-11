@@ -11,7 +11,7 @@ class UserController {
             let username = req.body.username;
             let password = req.body.password;
             // prettier-ignore
-            user_1.default.findOne({ "username": username, "password": password }, (err, user) => {
+            user_1.default.findOne({ 'username': username, 'password': password }, (err, user) => {
                 if (err)
                     console.log(err);
                 else

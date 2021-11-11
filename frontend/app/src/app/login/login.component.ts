@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
 import { User } from '../models/user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -20,10 +20,9 @@ export class LoginComponent implements OnInit {
       .signInService(this.username, this.password)
       .subscribe((user: User) => {
         if (user) {
-          //rutiranje
-          alert('ok');
+          alert('OK');
         } else {
-          alert('no user');
+          alert('No user');
         }
       });
   }
